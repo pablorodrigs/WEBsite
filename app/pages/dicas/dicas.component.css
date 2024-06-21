@@ -1,0 +1,63 @@
+/* Estilo para o container das dicas */
+.dica-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Para garantir que as dicas se ajustem responsivamente */
+  margin-top: 20px;
+}
+
+/* Estilo para cada dica individual */
+.dica {
+  background-color: #fff;
+  border: 2px solid rgb(73, 201, 201);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dica:hover {
+  transform: translateY(-5px); /* Efeito de levantamento ao passar o mouse */
+  box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada ao passar o mouse */
+}
+
+.dica h2 {
+  color: rgb(73, 201, 201);
+  margin-bottom: 10px;
+}
+
+.dica p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Estilo para o link dentro da dica */
+.dica a {
+  color: rgb(73, 201, 201);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.dica a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para o título da página */
+.page-title {
+  text-align: center;
+  font-size: 24px;
+  color: rgb(73, 201, 201);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Estilo para o rodapé de página */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #666;
+}

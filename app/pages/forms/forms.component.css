@@ -1,0 +1,80 @@
+/* Definindo a cor de fundo para todo o conteúdo */
+body, .form-container, .form-result {
+    background-color: rgb(229, 229, 229);
+  }
+  
+  /* Definindo a cor do texto */
+  body, .form-container, .form-result, .form-group label, .form-group input, .imc-result {
+    color: black;
+  }
+  
+  /* Estilos para o formulário */
+  form {
+    width: 450px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+  
+  .form-group label {
+    font-weight: arial;
+    font-size: .9em;
+    margin-bottom: .4em;
+  }
+  
+  .form-group input {
+    padding: 0.6em;
+    font-size: 0.8em;
+  }
+  
+  .form-container {
+    width: fit-content;
+    margin: 20px auto 0; /* Adiciona 20px de margem no topo */
+    border: 2px solid rgb(83, 78, 78);
+    border-radius: 10px;
+    padding: 20px;
+    animation: changeShadowColor 6s infinite;
+  }
+   
+  .form-result {
+    width: fit-content;
+    margin: 20px auto 0; /* Adiciona 20px de margem no topo */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    animation: changeShadowColor 6s infinite;
+  }
+
+  .imc-result {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .imc-result.fade-up {
+    display: block;
+    opacity: 1;
+  }
+
+  .container-forms {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn {
+    border: 1px solid black;
+    background: #06D001;
+    width: 150px;
+    align-self: center;
+  }
+
+  .btn:hover{
+    border: 2px solid blueviolet;
+    background: #baeca3;
+    transition: 0.7s;
+    width: 200px;
+  }

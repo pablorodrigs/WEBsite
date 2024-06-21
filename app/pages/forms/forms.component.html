@@ -1,0 +1,33 @@
+<div class="form-container">
+
+    <form #form="ngForm" (submit)="onSubmit(form)">
+    
+    <section class="container-forms">
+        <div class="form-group"> 
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Qual é o seu nome" required [(ngModel)]="nome" />
+        </div>
+        <div class="form-group"> 
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" placeholder="Qual é a sua idade" required [(ngModel)]="idade" />
+        </div>
+        <div class="form-group"> 
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" name="peso" placeholder="Qual é o seu peso (KG)" pattern="[0-9]+([.,][0-9]+)?" title="Digite um número válido" required [(ngModel)]="peso" />
+        </div>
+        <div class="form-group"> 
+            <label for="altura">Altura:</label>
+            <input type="text" id="altura" name="altura" placeholder="Qual é a sua altura" pattern="[0-9]+([.,][0-9]+)?" title="Digite um número válido" required [(ngModel)]="altura" />
+        </div>
+    
+        <input class="btn" type="submit"> <!-- [value]="btnText" -->
+      </section>
+          </form>
+    </div>
+  
+    <div class="form-result">
+        <div *ngIf="imcResult !== undefined" class="imc-result" [ngClass]="{'fade-up': mostrarResposta}">
+            Olá {{ nome }}, você tem {{ idade }} anos. <br>Seu IMC é: {{ imcResult.toFixed(2) }} <br>
+            Categoria de peso: {{ pesoCategoria }}
+        </div>
+    </div>
